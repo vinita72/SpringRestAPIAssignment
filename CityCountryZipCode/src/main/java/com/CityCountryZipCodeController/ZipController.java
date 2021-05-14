@@ -12,11 +12,11 @@ import com.CityCountryZipCodeService.ZipcodeService;
 public class ZipController {
 
 	@Autowired
-	ZipcodeService s;
+	ZipcodeService p;
 
 	@GetMapping("/find/{pincode}")
 	public Zip get(@PathVariable int zipcode) {
 		System.out.println(zipcode);
-		return s.getDetails(zipcode);	
+		return p.getDetails(zipcode);	
 	}
 }
